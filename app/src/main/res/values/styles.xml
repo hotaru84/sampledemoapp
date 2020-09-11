@@ -6,4 +6,11 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="fontFamily">@font/noto_sans</item>
     </style>
+    <style name="chipBase" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/emphasize_selected</item>
+        <item name="chipIconVisible">true</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="iconStartPadding">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
 </resources>
