@@ -52,11 +52,11 @@
         </com.google.android.material.chip.ChipGroup>
         <Spinner
             android:id="@+id/spinner"
+            android:selectedItemPosition="@={viewModel.selectedMode}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/list_label"
             style="@android:style/Widget.Material.Light.Spinner.Underlined"
-            android:selectedItemPosition="@={viewModel.selectedMode}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/chipGroup"/>
