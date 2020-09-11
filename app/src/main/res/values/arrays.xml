@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="list_label">
+        <item>@string/item1</item>
+        <item>@string/item2</item>
+    </array>
+</resources>

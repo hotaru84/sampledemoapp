@@ -5,7 +5,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,9 +29,15 @@ public class HomeFragment extends Fragment {
         FragmentHomeBinding binding = FragmentHomeBinding.inflate(inflater, (ViewGroup) root,false);
         homeViewModel.getIsBarcodeEnable().observe(getViewLifecycleOwner(),b->{
             //Changed
-            Log.d(TAG,b+"");
+            Toast.makeText(getContext(),"chip:" + b,Toast.LENGTH_SHORT).show();
+        });
+        homeViewModel.getSelectedMode().observe(getViewLifecycleOwner(),i->{
+            Toast.makeText(getContext(),"spinner:" + i,Toast.LENGTH_SHORT).show();
         });
         binding.setViewModel(homeViewModel);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(getContext(),R.array.list_label,R.layout.spinner_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        binding.spinner.setAdapter(adapter);
         return binding.getRoot();
     }
 }

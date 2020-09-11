@@ -14,6 +14,8 @@ public class HomeViewModel extends ViewModel {
     private MutableLiveData<Boolean> isBarcodeEnable = new MutableLiveData<>();
     private MutableLiveData<Boolean> is2DcodeEnable = new MutableLiveData<>();
     private MutableLiveData<Boolean> isOcrcodeEnable = new MutableLiveData<>();
+    private MutableLiveData<Integer> selectedMode = new MutableLiveData<>();
+
     public MutableLiveData<Boolean> getIsBarcodeEnable() {
         return isBarcodeEnable;
     }
@@ -24,5 +26,9 @@ public class HomeViewModel extends ViewModel {
 
     public MutableLiveData<Boolean> getIsOcrcodeEnable() {
         return isOcrcodeEnable;
+    }
+
+    public MutableLiveData<Integer> getSelectedMode() {
+        return selectedMode;
     }
 }

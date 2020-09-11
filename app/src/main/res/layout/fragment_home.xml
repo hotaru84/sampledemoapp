@@ -15,6 +15,7 @@
         tools:context=".ui.home.HomeFragment">
 
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,31 +25,40 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip1"
-                android:text="@string/barcode"
-                android:checked="@={viewModel.isBarcodeEnable}"
-                app:chipIcon="@drawable/ic_barcode"
                 style="@style/chipBase"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:checked="@={viewModel.isBarcodeEnable}"
+                android:text="@string/barcode"
+                app:chipIcon="@drawable/ic_barcode" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip2"
-                android:text="@string/qrcode"
-                android:checked="@={viewModel.is2DcodeEnable}"
-                app:chipIcon="@drawable/ic_qrcode"
                 style="@style/chipBase"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:checked="@={viewModel.is2DcodeEnable}"
+                android:text="@string/qrcode"
+                app:chipIcon="@drawable/ic_qrcode" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip3"
-                android:text="@string/ocr"
-                android:checked="@={viewModel.isOcrcodeEnable}"
-                app:chipIcon="@drawable/ic_ocr"
                 style="@style/chipBase"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:checked="@={viewModel.isOcrcodeEnable}"
+                android:text="@string/ocr"
+                app:chipIcon="@drawable/ic_ocr" />
         </com.google.android.material.chip.ChipGroup>
-
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/list_label"
+            style="@android:style/Widget.Material.Light.Spinner.Underlined"
+            android:selectedItemPosition="@={viewModel.selectedMode}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

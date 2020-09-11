@@ -3,7 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="barcode">1D</string>
-    <string name="qrcode">2D</string>
-    <string name="ocr">OCR</string>
+    <string name="barcode">chip1</string>
+    <string name="qrcode">chip2</string>
+    <string name="ocr">chip3</string>
+    <string name="item1">item1</string>
+    <string name="item2">item2</string>
 </resources>
